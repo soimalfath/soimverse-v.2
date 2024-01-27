@@ -29,7 +29,7 @@ const Hero = () => {
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a onClick={() => window.open("https://medium.com/@soimverse", "_blank")}>
                     <SiMedium /> Medium
                   </a>
                 </li>
