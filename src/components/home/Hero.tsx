@@ -1,6 +1,6 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdVerified, MdOutlineEmail } from "react-icons/md";
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiOutlineEllipsis } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
@@ -20,16 +20,20 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex gap-2 mr-4 mt-3">
-            <details className="dropdown dropdown-left">
-              <summary className="btn border-none font-semibold btn-sm bg-inherit hover:bg-transparent ">. . .</summary>
-              <ul className="p-4 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-auto">
+            <details className="dropdown dropdown-bottom">
+              <summary className="btn flex items-center btn-sm btn-outline btn-circle bg-inherit ">
+                <div>
+                  <AiOutlineEllipsis className="text-lg" />
+                </div>
+              </summary>
+              <ul className="p-0 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-auto">
                 <li>
-                  <a>
+                  <a id="resume">
                     <TbNotes /> Resume
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => window.open("https://medium.com/@soimverse", "_blank")}>
+                  <a id="medium" onClick={() => window.open("https://medium.com/@soimverse", "_blank")}>
                     <SiMedium /> Medium
                   </a>
                 </li>
@@ -41,7 +45,7 @@ const Hero = () => {
             <button id="linkedin" onClick={() => window.open("https://www.linkedin.com/in/soim-alfath/", "_blank")} className="btn-circle btn-sm btn-outline btn">
               <AiFillLinkedin className="text-2xl" />
             </button>
-            <button id="twitter" onClick={() => window.open("https://twitter.com/mbuhsapaaaaa", "_blank")} className="btn btn-sm rounded-badge btn-outline">
+            <button id="twitter" onClick={() => window.open("https://twitter.com/mbuhsapaaaaa", "_blank")} className="btn btn-sm bg-[#daa20e] text-base-100 hover:bg-inherit hover:text-white rounded-badge btn-outline">
               <div className="flex items-center gap-2">
                 {" "}
                 Follow
@@ -51,8 +55,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="ml-3 mt-4">
-          <div className="font-semibold text-2xl text-white flex gap-1 items-center">
-            Soim Alfath <MdVerified className="text-[#d59406] text-md" />
+          <div className="font-semibold text-2xl text-white flex gap-1 items-baseline md:items-center">
+            Soim Alfath <MdVerified className="text-[#daa20e] text-base md:text-xl" />
           </div>
           <div className="flex text-sm items-baseline gap-1 text-[#8899A6] mb-2"> @mbuhsapaaa</div>
           <div className="text-md text-white">Digital Marketer | Frontend Developer | Finance Management Eanthusiast</div>
