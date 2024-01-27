@@ -3,6 +3,8 @@ import { MdVerified, MdOutlineEmail } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
+import { TbNotes } from "react-icons/tb";
+import { SiMedium } from "react-icons/si";
 
 const Hero = () => {
   return (
@@ -18,13 +20,28 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex gap-2 mr-4 mt-3">
-            <button onClick={() => window.open("mailto:soimkmpbg@gmail.com", "_blank")} className="btn-circle btn btn-sm  btn-outline ">
+            <details className="dropdown dropdown-left">
+              <summary className="btn border-none font-semibold btn-sm bg-inherit hover:bg-transparent ">. . .</summary>
+              <ul className="p-4 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-auto">
+                <li>
+                  <a>
+                    <TbNotes /> Resume
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <SiMedium /> Medium
+                  </a>
+                </li>
+              </ul>
+            </details>
+            <button id="email" onClick={() => window.open("mailto:soimkmpbg@gmail.com", "_blank")} className="btn-circle btn btn-sm  btn-outline ">
               <MdOutlineEmail className="text-lg" />
             </button>
-            <button onClick={() => window.open("https://www.linkedin.com/in/soim-alfath/", "_blank")} className="btn-circle btn-sm btn-outline btn">
+            <button id="linkedin" onClick={() => window.open("https://www.linkedin.com/in/soim-alfath/", "_blank")} className="btn-circle btn-sm btn-outline btn">
               <AiFillLinkedin className="text-2xl" />
             </button>
-            <button onClick={() => window.open("https://twitter.com/mbuhsapaaaaa", "_blank")} className="btn btn-sm rounded-badge btn-outline">
+            <button id="twitter" onClick={() => window.open("https://twitter.com/mbuhsapaaaaa", "_blank")} className="btn btn-sm rounded-badge btn-outline">
               <div className="flex items-center gap-2">
                 {" "}
                 Follow
