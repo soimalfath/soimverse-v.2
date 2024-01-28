@@ -1,6 +1,7 @@
 // import { tabFeed } from "../common/interface";
 import { tabFeed } from "../../helper/feed";
 import { useState } from "react";
+import Post from "./Post";
 const Feed = () => {
   const [activeTab, setActiveTab] = useState("feed");
 
@@ -16,6 +17,7 @@ const Feed = () => {
           </div>
         ))}
       </div>
+      <Post />
     </section>
   );
 };

@@ -21,3 +21,5 @@ export const tabFeed = [
         value: 'about'
     },
 ]
+
+export const profileImage = 'https://veilannastore.com/wp-content/uploads/2024/01/117827510.png'

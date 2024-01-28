@@ -5,6 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
 import { SiMedium } from "react-icons/si";
+import { profileImage } from "../../helper/feed";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
         <div className="flex justify-between">
           <div className="avatar mt-[-15%] md:mt-[-8%] ml-3">
             <div className="lg:w-32 w-28 rounded-full border-4 border-base-100">
-              <img src="https://veilannastore.com/wp-content/uploads/2024/01/117827510.png" />
+              <img src={profileImage} />
             </div>
           </div>
           <div className="flex gap-2 mr-4 mt-3">
