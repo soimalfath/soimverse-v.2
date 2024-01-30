@@ -2,12 +2,14 @@
 import { tabFeed } from "../../helper/feed";
 import { useState } from "react";
 import Post from "./Post";
+import { post,about, project } from "../../helper/post";
 const Feed = () => {
   const [activeTab, setActiveTab] = useState("feed");
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
+  const selectedData = activeTab === "feed" ? post : activeTab === "about" ? about : project;
   return (
     <section>
       <div className={`grid grid-cols-3 mt-3 border-b-[0.1px] border-b-gray-700`}>
@@ -17,7 +19,11 @@ const Feed = () => {
           </div>
         ))}
       </div>
-      <Post />
+      { selectedData.map((item, index) => (
+        <Post post={item.post} image={item.image} date={item.date} key={index}/>
+      )
+      )}
+      
     </section>
   );
 };
