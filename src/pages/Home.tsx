@@ -1,6 +1,6 @@
 import Hero from "../components/home/Hero";
 import Feed from "../components/home/Feed";
-import OnDevelopPage from "../components/ondevelop";
+// import OnDevelopPage from "../components/ondevelop";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <div className="grid justify-center">
           <Hero />
           <Feed />
-          <OnDevelopPage />
+          {/* <OnDevelopPage /> */}
         </div>
       </section>
     </>
