@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="flex justify-between">
           <div className="avatar mt-[-15%] md:mt-[-8%] ml-3">
             <div className="lg:w-32 w-28 rounded-full border-4 border-base-100">
-              <img src={profileImage} />
+              <ProgressiveImage lowResSrc={profileImage} highResSrc={profileImage} className="" alt="" />
             </div>
           </div>
           <div className="flex gap-2 mr-4 mt-3">
