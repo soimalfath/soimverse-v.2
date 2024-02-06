@@ -7,3 +7,10 @@ export interface post {
     image: string
     date: string
 }
+
+export interface progresiveImage {
+    lowResSrc: string
+    highResSrc: string
+    alt: string
+    className: string
+}

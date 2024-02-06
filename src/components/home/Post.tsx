@@ -2,6 +2,7 @@ import { profileImage } from "../../helper/feed";
 import { MdVerified } from "react-icons/md";
 import { TbPointFilled } from "react-icons/tb";
 import { post } from "../../common/interface";
+import ProgressiveImage from "../progresiveImage";
 const post = ({ post, image, date }: post) => {
   return (
     <section className="max-w-[900px]">
@@ -9,7 +10,7 @@ const post = ({ post, image, date }: post) => {
         <div className="flex gap-4 pb-2">
           <div className="avatar">
             <div className="w-12 h-12 rounded-full">
-              <img src={profileImage} />
+              <ProgressiveImage lowResSrc={profileImage} highResSrc={profileImage} alt="" className="" />
             </div>
           </div>
           <div>
@@ -25,7 +26,7 @@ const post = ({ post, image, date }: post) => {
             <div className="text-white">
               <div className="mb-2">{post}</div>
               <div className="max-w-[800px]">
-                <img className="rounded-xl w-full" src={image} alt="" />
+                <ProgressiveImage lowResSrc={image} highResSrc={image} alt="" className="rounded-xl w-full" />
               </div>
             </div>
           </div>
