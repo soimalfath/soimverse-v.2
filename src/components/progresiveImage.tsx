@@ -13,7 +13,7 @@ const ProgressiveImage = ({ lowResSrc, highResSrc, alt, className }: progresiveI
     };
   }, [highResSrc]);
 
-  return <img src={imageSrc} alt={alt} className={className} />;
+  return <img src={imageSrc} alt={alt} className={className} loading="lazy" />;
 };
 
 export default ProgressiveImage;
