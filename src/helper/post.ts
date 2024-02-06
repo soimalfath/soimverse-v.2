@@ -8,7 +8,7 @@ export const post = [
 
 export const about = [
     {
-        post: 'Hi! I'm Soim. I'm a digital marketer and frontend developer. I began my career in digital marketing in 2018, handling clients across various niches. In 2019, I transitioned into a talent lead role, managing advertisers and clients. In November 2022, I started learning software development, and by February 2023, I embarked on my career as a frontend developer. I'm thrilled to be both a digital marketer and frontend developer.',
+        post: 'Hi! Im Soim. Im a digital marketer and frontend developer. I began my career in digital marketing in 2018, handling clients across various niches. In 2019, I transitioned into a talent lead role, managing advertisers and clients. In November 2022, I started learning software development, and by February 2023, I embarked on my career as a frontend developer. Im thrilled to be both a digital marketer and frontend developer.',
         date: '18 Jul 2018',
         image: 'https://www.qidigi.com/_next/image/?url=https%3A%2F%2Fveilannastore.com%2Fwp-content%2Fuploads%2F2023%2F04%2FFB_IMG_1569462794928.jpg&w=384&q=75'
     }
