@@ -22,4 +22,5 @@ export const tabFeed = [
     },
 ]
 
-export const profileImage = 'https://veilannastore.com/wp-content/uploads/2024/01/117827510.png'
+export const profileImage = 'https://veilannastore.com/wp-content/uploads/2024/02/117827510.webp'
+export const imageHero = "https://veilannastore.com/wp-content/uploads/2024/02/generate-image-ilustration-about-digital-marketing-finance-programing-1.webp";

@@ -5,11 +5,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
 import { SiMedium } from "react-icons/si";
-import { profileImage } from "../../helper/feed";
+import { profileImage, imageHero } from "../../helper/feed";
 import ProgressiveImage from "../progresiveImage";
 
 const Hero = () => {
-  const imageHero = "https://veilannastore.com/wp-content/uploads/2024/01/generate-image-ilustration-about-digital-marketing-finance-programing-1.png";
   return (
     <section className="flex justify-center">
       <div>
