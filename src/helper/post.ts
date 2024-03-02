@@ -27,7 +27,7 @@ export const project = [
     },
     {
         post : 'Komchat. Komchat is a technology-based service that allows you to send multiple messages to multiple WhatsApp numbers with just one click. Additionally, it offers other interesting features such as Group Contacts Grabber, Livechat Widget, and WA Link Rotator. You can access it at "https://komchat.id".',
-        date: '19 February 2024',
+        date: '29 February 2024',
         image: 'https://veilannastore.com/wp-content/uploads/2024/03/Screenshot-2024-03-02-171103.webp'
     }
 ]
