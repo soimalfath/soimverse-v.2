@@ -21,8 +21,13 @@ export const project = [
         image: 'https://veilannastore.com/wp-content/uploads/2024/02/Screenshot-2024-01-30-224755.webp'
     },
     {
-        post : 'Komplace.id is a web application, an omnichannel marketplace designed to manage stores from various marketplaces in one centralized platform. Komplace is built using Vuejs 3 with Pinia and Composition API You can access it at "https://komplace.id".',
+        post : 'Komplace. Komplace.id is a web application, an omnichannel marketplace designed to manage stores from various marketplaces in one centralized platform. Komplace is built using Vuejs 3 with Pinia and Composition API You can access it at "https://komplace.id".',
         date: '1 Jul 2023',
         image: 'https://veilannastore.com/wp-content/uploads/2024/02/Screenshot-2024-01-30-225313.webp'
+    },
+    {
+        post : 'Komchat. Komchat is a technology-based service that allows you to send multiple messages to multiple WhatsApp numbers with just one click. Additionally, it offers other interesting features such as Group Contacts Grabber, Livechat Widget, and WA Link Rotator. You can access it at "https://komchat.id".',
+        date: '29 February 2024',
+        image: 'https://veilannastore.com/wp-content/uploads/2024/03/Screenshot-2024-03-02-171103.webp'
     }
 ]
