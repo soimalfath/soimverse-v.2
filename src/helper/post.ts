@@ -16,6 +16,11 @@ export const about = [
 
 export const project = [
     {
+        post : 'Komchat. Komchat is a technology-based service that allows you to send multiple messages to multiple WhatsApp numbers with just one click. Additionally, it offers other interesting features such as Group Contacts Grabber, Livechat Widget, and WA Link Rotator. You can access it at "https://komchat.id".',
+        date: '29 Feb 2024',
+        image: 'https://veilannastore.com/wp-content/uploads/2024/03/Screenshot-2024-03-02-171103.webp'
+    },
+    {
         post : 'The Qidigi App is a simple web application designed for digital marketers. It enables them to manage daily reports, financial reports, and user roles for customer service, advertisers, and administrators. I developed this web app using Vue.js 3 with Pinia and Composition API for the frontend, and Firebase for the backend. You can try accessing it at "https://app.qidigi.com".',
         date: '1 Okt 2023',
         image: 'https://veilannastore.com/wp-content/uploads/2024/02/Screenshot-2024-01-30-224755.webp'
@@ -24,10 +29,6 @@ export const project = [
         post : 'Komplace. Komplace.id is a web application, an omnichannel marketplace designed to manage stores from various marketplaces in one centralized platform. Komplace is built using Vuejs 3 with Pinia and Composition API You can access it at "https://komplace.id".',
         date: '1 Jul 2023',
         image: 'https://veilannastore.com/wp-content/uploads/2024/02/Screenshot-2024-01-30-225313.webp'
-    },
-    {
-        post : 'Komchat. Komchat is a technology-based service that allows you to send multiple messages to multiple WhatsApp numbers with just one click. Additionally, it offers other interesting features such as Group Contacts Grabber, Livechat Widget, and WA Link Rotator. You can access it at "https://komchat.id".',
-        date: '29 Feb 2024',
-        image: 'https://veilannastore.com/wp-content/uploads/2024/03/Screenshot-2024-03-02-171103.webp'
     }
+    
 ]
