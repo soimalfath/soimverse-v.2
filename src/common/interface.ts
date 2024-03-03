@@ -1,3 +1,5 @@
+
+
 export interface tabFeed {
     tabFeed: string
 }
@@ -13,4 +15,12 @@ export interface progresiveImage {
     highResSrc: string
     alt: string
     className: string
+}
+
+export interface lottie {
+    loop: boolean
+    autoplay: boolean
+    animation: any
+    width: number | string
+    height: number | string
 }

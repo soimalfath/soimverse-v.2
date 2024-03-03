@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdVerified, MdOutlineEmail } from "react-icons/md";
 import { AiFillLinkedin, AiOutlineEllipsis } from "react-icons/ai";
@@ -7,13 +8,34 @@ import { TbNotes } from "react-icons/tb";
 import { SiMedium } from "react-icons/si";
 import { profileImage, imageHero } from "../../helper/feed";
 import ProgressiveImage from "../progresiveImage";
+import Animate from "../animate";
+import animationData from "../../assets/lotties/cover.json";
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkWindowSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkWindowSize();
+
+    window.addEventListener("resize", checkWindowSize);
+
+    return () => {
+      window.removeEventListener("resize", checkWindowSize);
+    };
+  }, []);
+
+  const width = isMobile ? "100%" : 900;
+  const height = isMobile ? "300px" : 350;
+
   return (
     <section className="flex justify-center">
       <div>
-        <div>
-          <ProgressiveImage lowResSrc={imageHero} highResSrc={imageHero} className="w-[900px] h-[200px] object-cover" alt="" />
+        <div className="max-w-[900px]">
+          <Animate loop={true} animation={animationData} height={height} width={width} autoplay={true} className="w-[900px] h-[200px] object-cover" />
+          {/* <ProgressiveImage lowResSrc={imageHero} highResSrc={imageHero} className="w-[900px] h-[200px] object-cover" alt="" /> */}
         </div>
         <div className="flex justify-between">
           <div className="avatar mt-[-15%] md:mt-[-8%] ml-3">
