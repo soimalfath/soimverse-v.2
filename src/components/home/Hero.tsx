@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
 import { SiMedium } from "react-icons/si";
-import { profileImage, imageHero } from "../../helper/feed";
+import { profileImage } from "../../helper/feed";
 import ProgressiveImage from "../progresiveImage";
 import Animate from "../animate";
 import animationData from "../../assets/lotties/cover.json";
@@ -34,7 +34,7 @@ const Hero = () => {
     <section className="flex justify-center">
       <div>
         <div className="max-w-[900px]">
-          <Animate loop={true} animation={animationData} height={height} width={width} autoplay={true} className="w-[900px] h-[200px] object-cover" />
+          <Animate loop={true} animation={animationData} height={height} width={width} autoplay={true} />
           {/* <ProgressiveImage lowResSrc={imageHero} highResSrc={imageHero} className="w-[900px] h-[200px] object-cover" alt="" /> */}
         </div>
         <div className="flex justify-between">

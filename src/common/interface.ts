@@ -20,7 +20,7 @@ export interface progresiveImage {
 export interface lottie {
     loop: boolean
     autoplay: boolean
-    animation: any
+    animation: object
     width: number | string
     height: number | string
 }
