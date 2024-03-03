@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdVerified, MdOutlineEmail } from "react-icons/md";
 import { AiFillLinkedin, AiOutlineEllipsis } from "react-icons/ai";
@@ -12,23 +11,8 @@ import Animate from "../animate";
 import animationData from "../../assets/lotties/cover.json";
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const checkWindowSize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkWindowSize();
-
-    window.addEventListener("resize", checkWindowSize);
-
-    return () => {
-      window.removeEventListener("resize", checkWindowSize);
-    };
-  }, []);
-
-  const width = isMobile ? "100%" : 900;
-  const height = isMobile ? "300px" : 350;
+  const width = window.innerWidth <= 768 ? "100%" : 900;
+  const height = window.innerWidth <= 768 ? "300px" : 350;
 
   return (
     <section className="flex justify-center">
