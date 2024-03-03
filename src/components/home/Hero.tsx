@@ -12,7 +12,7 @@ import animationData from "../../assets/lotties/cover.json";
 
 const Hero = () => {
   const width = window.innerWidth <= 768 ? "100%" : 900;
-  const height = window.innerWidth <= 768 ? "300px" : 350;
+  const height = window.innerWidth <= 768 ? "225px" : 450;
 
   return (
     <section className="flex justify-center">
