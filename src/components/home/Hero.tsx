@@ -8,7 +8,8 @@ import { SiMedium } from "react-icons/si";
 import { profileImage } from "../../helper/feed";
 import ProgressiveImage from "../progresiveImage";
 import Animate from "../animate";
-import animationData from "../../assets/lotties/cover.json";
+// import animationData from "../../assets/lotties/cover.json";
+import animationRamadhan from "../../assets/lotties/ramadhan.json";
 
 const Hero = () => {
   const width = window.innerWidth <= 768 ? "100%" : 900;
@@ -18,7 +19,7 @@ const Hero = () => {
     <section className="flex justify-center">
       <div>
         <div className="max-w-[900px]">
-          <Animate loop={true} animation={animationData} height={height} width={width} autoplay={true} />
+          <Animate loop={true} animation={animationRamadhan} height={height} width={width} autoplay={true} />
           {/* <ProgressiveImage lowResSrc={imageHero} highResSrc={imageHero} className="w-[900px] h-[200px] object-cover" alt="" /> */}
         </div>
         <div className="flex justify-between">
