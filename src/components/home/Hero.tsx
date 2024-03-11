@@ -5,15 +5,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
 import { TbNotes } from "react-icons/tb";
 import { SiMedium } from "react-icons/si";
-import { profileImage, imageHero } from "../../helper/feed";
+import { profileImage } from "../../helper/feed";
 import ProgressiveImage from "../progresiveImage";
+import Animate from "../animate";
+// import animationData from "../../assets/lotties/cover.json";
+import animationRamadhan from "../../assets/lotties/ramadhan.json";
 
 const Hero = () => {
+  const width = window.innerWidth <= 768 ? "100%" : 900;
+  const height = window.innerWidth <= 768 ? "225px" : 450;
+
   return (
     <section className="flex justify-center">
       <div>
-        <div>
-          <ProgressiveImage lowResSrc={imageHero} highResSrc={imageHero} className="w-[900px] h-[200px] object-cover" alt="" />
+        <div className="max-w-[900px]">
+          <Animate loop={true} animation={animationRamadhan} height={height} width={width} autoplay={true} />
+          {/* <ProgressiveImage lowResSrc={imageHero} highResSrc={imageHero} className="w-[900px] h-[200px] object-cover" alt="" /> */}
         </div>
         <div className="flex justify-between">
           <div className="avatar mt-[-15%] md:mt-[-8%] ml-3">
