@@ -25,10 +25,15 @@ export interface lottie {
     height: number | string
 }
 
+interface Coordinates {
+  longitude: number;
+  latitude: number;
+  // Jika ada properti lain yang diperlukan, tambahkan di sini
+}
 export interface geoLocated {
-    coords: object 
     isGeolocationAvailable: boolean
     isGeolocationEnabled: boolean
+    coords? : Coordinates 
 }
 
 export interface tabType {
@@ -41,3 +46,4 @@ export interface selectedType {
     date: string
     image: string
 }
+

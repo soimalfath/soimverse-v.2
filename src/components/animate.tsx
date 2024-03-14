@@ -1,6 +1,6 @@
 // import React from "react";
 import Lottie from "react-lottie";
-import { lottie } from "@/common/interface";
+import { lottie } from "../common/interface";
 
 const animate = ({ loop, autoplay, animation, width, height }: lottie) => {
   const defaultOptions = {

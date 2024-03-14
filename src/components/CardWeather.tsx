@@ -1,6 +1,6 @@
-import { apiGetCurrentWeather } from "@/service/api.weather.service";
-import { apiGetIP } from "@/service/api.getIP.service";
-import { geoLocated } from "@/../common/interface";
+import { apiGetCurrentWeather } from "../service/api.weather.service";
+import { apiGetIP } from "../service/api.getIP.service";
+import { geoLocated } from "../common/interface";
 import { useGeolocated } from "react-geolocated";
 
 import { useState, useEffect } from "react";

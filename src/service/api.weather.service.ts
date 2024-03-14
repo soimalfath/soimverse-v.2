@@ -1,4 +1,4 @@
-import { axiosWeather } from "@/plugins/axios";
+import { axiosWeather } from "../plugins/axios";
 const URL = '/data/2.5/weather'
 
 

@@ -1,9 +1,9 @@
 // import { tabFeed } from "../common/interface";
-import { tabFeed } from "@/helper/feed";
+import { tabFeed } from "../../helper/feed";
 import { useState} from "react";
-import {  tabType, selectedType } from "@/../common/interface";
+import {  tabType, selectedType } from "../../common/interface";
 import Post from "./Post";
-import { post, about, project } from "@/helper/post";
+import { post, about, project } from "../../helper/post";
 
 const Feed = () => {
   const [activeTab, setActiveTab] = useState("feed");
