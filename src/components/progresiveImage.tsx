@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { progresiveImage } from "../common/interface";
+import { progresiveImage } from "@/common/interface";
 
 const ProgressiveImage = ({ lowResSrc, highResSrc, alt, className }: progresiveImage) => {
   const [imageSrc, setImageSrc] = useState(lowResSrc);

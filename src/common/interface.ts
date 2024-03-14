@@ -24,3 +24,20 @@ export interface lottie {
     width: number | string
     height: number | string
 }
+
+export interface geoLocated {
+    coords: object 
+    isGeolocationAvailable: boolean
+    isGeolocationEnabled: boolean
+}
+
+export interface tabType {
+    tabName: string
+    value: string
+}
+
+export interface selectedType {
+    post: string
+    date: string
+    image: string
+}

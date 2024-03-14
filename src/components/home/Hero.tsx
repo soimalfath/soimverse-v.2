@@ -13,7 +13,7 @@ import animationRamadhan from "../../assets/lotties/ramadhan.json";
 
 const Hero = () => {
   const width = window.innerWidth <= 768 ? "100%" : 900;
-  const height = window.innerWidth <= 768 ? "225px" : 450;
+  const height = window.innerWidth <= 768 ? "225px" : 300;
 
   return (
     <section className="flex justify-center">
