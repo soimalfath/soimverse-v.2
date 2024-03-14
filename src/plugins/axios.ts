@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios from "axios";
 
 const URL: string | undefined =  import.meta.env.VITE_REACT_APP_OPEN_WEATHER_BASE_URL;
 const APIKEY: string | undefined =  import.meta.env.VITE_REACT_APP_OPEN_WEATHER_API_KEY;
@@ -13,7 +13,7 @@ export const axiosWeather = axios.create({
 });
 
 axiosWeather.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config) => {
     const { params } = config;
     const { lat, lon } = params || {};
 
