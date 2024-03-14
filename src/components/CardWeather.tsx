@@ -1,0 +1,97 @@
+import { apiGetCurrentWeather } from "../service/api.weather.service";
+import { apiGetIP } from "../service/api.getIP.service";
+import { geoLocated } from "../common/interface";
+import { useGeolocated } from "react-geolocated";
+
+import { useState, useEffect } from "react";
+
+const CardWeather = () => {
+  const [dataWeather, setDataWeather] = useState({
+    icon: "",
+    city: "",
+    temp: 0,
+    weather: "",
+  });
+
+  const { coords, isGeolocationAvailable, isGeolocationEnabled }: geoLocated =
+    useGeolocated({
+      positionOptions: {
+        enableHighAccuracy: false,
+      },
+      userDecisionTimeout: 5000,
+    });
+
+  useEffect(() => {
+    const currentWeather = async (lon: number, lat: number) => {
+      try {
+        const data = await apiGetCurrentWeather(lon, lat);
+        setDataWeather({
+          icon: data.data.weather[0].icon,
+          city: data.data.name,
+          temp: data.data.main.temp,
+          weather: data.data.weather[0].description,
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    const getWeatherByIpUs = async () => {
+      try {
+        const data = await apiGetIP();
+        if (data) {
+         await currentWeather(data.data.longitude,data.data.latitude);
+          console.log("byip");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    const getWeatherByGeo = async () => {
+      try {
+        if (coords) {
+        await  currentWeather(coords.longitude,coords.latitude);
+          console.log("bygeo");
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+      if (isGeolocationEnabled) {
+        getWeatherByGeo();
+      } else {
+        getWeatherByIpUs();
+      }
+    
+  }, [
+    coords,
+    isGeolocationAvailable,
+    isGeolocationEnabled,
+  ]);
+  return (
+    <section className="fixed z-10 bottom-1 bg-base-300 border-r-0 rounded-lg border-base-200 border-2 shadow-lg w-auto h-auto right-0">
+      <div className="px-2 py-1">
+        <div className="flex items-center justify-center">
+          <div>
+            <img
+              className="h-[5rem] object-cover"
+              src={`https://veilannastore.com/wp-content/uploads/2024/03/${dataWeather.icon}.svg`}
+              alt=""
+            />
+          </div>
+
+          <div>
+            <div className="text-white">{dataWeather.city}</div>
+            <div className="text-white text-sm">
+              {dataWeather.temp.toFixed(2).substring(0, 2)}° C
+            </div>
+            <div className="capitalize text-white text-xs">{dataWeather.weather}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CardWeather;
