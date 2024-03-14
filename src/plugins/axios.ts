@@ -15,10 +15,10 @@ export const axiosWeather = axios.create({
 axiosWeather.interceptors.request.use(
   (config) => {
     const { params } = config;
-    const { lat, lon } = params || {};
 
     config.params = {
-      ...params,
+      lat:params,
+      lon: params,
       appid: APIKEY
     };
 
