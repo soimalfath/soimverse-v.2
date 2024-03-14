@@ -70,7 +70,7 @@ const CardWeather = () => {
     isGeolocationEnabled,
   ]);
   return (
-    <section className="fixed z-10 bottom-1 bg-base-300 border-r-0 rounded-lg border-base-200 border-2 shadow-lg w-auto h-auto right-0">
+    <section className="fixed z-10 top-1 bg-base-300 border-r-0 rounded-lg border-base-200 border-2 shadow-lg w-auto h-auto right-0">
       <div className="px-2 py-1">
         <div className="flex items-center justify-center">
           <div>
