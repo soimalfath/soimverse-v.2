@@ -70,9 +70,9 @@ const CardWeather = () => {
     isGeolocationEnabled,
   ]);
   return (
-    <section className="fixed z-10 top-1 bg-base-300 border-r-0 rounded-lg border-base-200 border-2 shadow-lg w-auto h-auto right-0">
+    <section className="fixed z-10 top-1 rounded-tr-none rounded-br-none backdrop-blur-xl border-r-0 rounded-lg  shadow-lg w-auto h-auto right-0">
       <div className="px-2 py-1">
-        <div className="flex items-center justify-center">
+        {dataWeather.city ? (<div className="flex items-center justify-center pr-2">
           <div>
             <img
               className="h-[5rem] object-cover"
@@ -83,12 +83,13 @@ const CardWeather = () => {
 
           <div>
             <div className="text-white">{dataWeather.city}</div>
-            <div className="text-white text-sm">
+            <div className="text-white text-xs">
               {dataWeather.temp.toFixed(2).substring(0, 2)}° C
             </div>
             <div className="capitalize text-white text-xs">{dataWeather.weather}</div>
           </div>
-        </div>
+        </div>): (<div className="skeleton w-[190px]  backdrop-blur-xl h-[90px]"></div>)}
+        
       </div>
     </section>
   );
