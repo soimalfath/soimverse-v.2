@@ -7,7 +7,7 @@ import { VscGraph } from "react-icons/vsc";
 
 import { post } from "../../common/interface";
 import ProgressiveImage from "../progresiveImage";
-const post = ({ post, date, cover, link, title }: post) => {
+const post = ({ post, date, cover, link, title, tags }: post) => {
   const handleClick = (link: string) => {
     window.open(link);
   };
@@ -36,11 +36,10 @@ const post = ({ post, date, cover, link, title }: post) => {
                 <div className="mb-2 !max-w-full flex flex-wrap" dangerouslySetInnerHTML={{ __html: post }} />
                 <p className="relative bottom-3 text-blue-500">Show More</p>
               </div>
-              <div className="flex flex-wrap">
-                <div className="p-1 rounded-md bg-base-300">#react</div>
-                <div className="p-1 rounded-md bg-base-100">#react</div>
-                <div className="p-1 rounded-md bg-base-100">#react</div>
-                <div className="p-1 rounded-md bg-base-100">#react</div>
+              <div className="flex gap-2 mb-1 flex-wrap">
+                {tags.map((tag: string) => (
+                  <div className=" rounded-md bg-slate-900">#{tag}</div>
+                ))}
               </div>
               <div className="max-w-[800px] mt-">
                 <ProgressiveImage lowResSrc={cover} highResSrc={cover} alt="" className="rounded-xl w-full" />

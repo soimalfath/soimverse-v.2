@@ -4,12 +4,15 @@ export interface tabFeed {
     tabFeed: string
 }
 
+
+
 export interface post {
     post: string
     cover: string
     date: string
     link: string
     title: string
+    tags: string[]
 }
 
 export interface dataType {

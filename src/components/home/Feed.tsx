@@ -54,7 +54,7 @@ const Feed = () => {
         ))}
       </div>
       {selectedCategories.length ? (
-        selectedCategories.map((item: dataType, index: number) => <Post link={item.link} cover={item.featured_media} post={item.content} title={item.title} date={dayjs(item.date).format("DD MMM YYYY")} key={index} />)
+        selectedCategories.map((item: dataType, index: number) => <Post link={item.link} cover={item.featured_media} post={item.content} title={item.title} tags={item.tags} date={dayjs(item.date).format("DD MMM YYYY")} key={index} />)
       ) : (
         <Skelepost />
       )}
