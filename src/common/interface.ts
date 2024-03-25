@@ -4,10 +4,28 @@ export interface tabFeed {
     tabFeed: string
 }
 
+
+
 export interface post {
     post: string
-    image: string
+    cover: string
     date: string
+    link: string
+    title: string
+    tags: string[]
+}
+
+export interface dataType {
+    date: string;
+    cover: string;
+    content: string;
+    id: number;
+    categories: string[];
+    tags: string[];
+    title: string;
+    status: string;
+    featured_media: string;
+    link: string
 }
 
 export interface progresiveImage {
@@ -45,5 +63,6 @@ export interface selectedType {
     post: string
     date: string
     image: string
+    content: string
 }
 
