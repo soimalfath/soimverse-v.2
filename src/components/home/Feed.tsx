@@ -8,6 +8,7 @@ import { tabType, dataType } from "../../common/interface";
 import { apiGetPost } from "../../service/api.post.service";
 
 import Post from "./Post";
+import Skelepost from "../skeleton/Post";
 
 // import { post, about, project } from "../../helper/post";
 
@@ -53,18 +54,9 @@ const Feed = () => {
         ))}
       </div>
       {selectedCategories.length ? (
-        selectedCategories.map((item: dataType, index: number) => <Post link={item.link} cover={item.featured_media} post={item.content} date={dayjs(item.date).format("DD MMM YYYY")} key={index} />)
+        selectedCategories.map((item: dataType, index: number) => <Post link={item.link} cover={item.featured_media} post={item.content} title={item.title} date={dayjs(item.date).format("DD MMM YYYY")} key={index} />)
       ) : (
-        <div className="flex flex-col gap-4 w-full p-4">
-          <div className="flex gap-4 items-center">
-            <div className="skeleton w-12 h-12 rounded-full shrink-0"></div>
-            <div className="flex flex-col gap-4">
-              <div className="skeleton h-4 w-20"></div>
-              <div className="skeleton h-4 w-28"></div>
-            </div>
-          </div>
-          <div className="skeleton h-32 w-full"></div>
-        </div>
+        <Skelepost />
       )}
     </section>
   );

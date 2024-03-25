@@ -7,7 +7,7 @@ import { VscGraph } from "react-icons/vsc";
 
 import { post } from "../../common/interface";
 import ProgressiveImage from "../progresiveImage";
-const post = ({ post, date, cover, link }: post) => {
+const post = ({ post, date, cover, link, title }: post) => {
   const handleClick = (link: string) => {
     window.open(link);
   };
@@ -25,21 +25,28 @@ const post = ({ post, date, cover, link }: post) => {
               <div className="text-white font-semibold">Soim Alfath</div>
               <MdVerified className="text-[#daa20e] text-base" />
               <div className="text-[#8899A6]">@mbuhsapaaa</div>
-              <div className="text-[#8899A6] flex items-center ml-1 md:ml-0">
+              <div className="text-[#8899A6] text-xs md:font-normal flex items-center ml-1 md:ml-0">
                 <TbPointFilled className="text-xs" />
                 {date}
               </div>
             </div>
             <div className="text-white !max-w-full">
+              <div className="mb-2 uppercase">{title}</div>
               <div className="flex flex-wrap ">
                 <div className="mb-2 !max-w-full flex flex-wrap" dangerouslySetInnerHTML={{ __html: post }} />
-                <p className="relative text-blue-500">Show More</p>
+                <p className="relative bottom-3 text-blue-500">Show More</p>
               </div>
-              <div className="max-w-[800px] mt-1">
+              <div className="flex flex-wrap">
+                <div className="p-1 rounded-md bg-base-300">#react</div>
+                <div className="p-1 rounded-md bg-base-100">#react</div>
+                <div className="p-1 rounded-md bg-base-100">#react</div>
+                <div className="p-1 rounded-md bg-base-100">#react</div>
+              </div>
+              <div className="max-w-[800px] mt-">
                 <ProgressiveImage lowResSrc={cover} highResSrc={cover} alt="" className="rounded-xl w-full" />
               </div>
             </div>
-            <div className="flex justify-between px-2 gap-1 mt-3">
+            <div className="flex justify-between px-2 gap-1 mt-2">
               <FaRegComment /> <FaRegHeart /> <VscGraph /> <PiShareNetwork />
             </div>
           </div>

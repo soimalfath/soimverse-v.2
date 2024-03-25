@@ -9,6 +9,7 @@ export interface post {
     cover: string
     date: string
     link: string
+    title: string
 }
 
 export interface dataType {
