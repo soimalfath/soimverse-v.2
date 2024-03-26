@@ -21,7 +21,6 @@ const Feed = () => {
     const getPost = async () => {
       try {
         const response = await apiGetPost();
-        console.log(response.data);
         setDataPost(response.data.data);
       } catch (error) {
         console.log(error);
@@ -36,7 +35,6 @@ const Feed = () => {
       return categories.includes(activeTab.toLowerCase());
     });
 
-    console.log(dataSelect);
     setSelectedCategories(dataSelect);
   }, [activeTab, dataPost]);
 

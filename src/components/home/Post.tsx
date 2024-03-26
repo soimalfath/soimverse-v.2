@@ -36,9 +36,9 @@ const post = ({ post, date, cover, link, title, tags }: post) => {
                 <div className="mb-2 !max-w-full flex flex-wrap" dangerouslySetInnerHTML={{ __html: post }} />
                 <p className="relative bottom-3 text-blue-500">Show More</p>
               </div>
-              <div className="flex gap-2 mb-1 flex-wrap">
+              <div className="flex gap-2 mb-2 flex-wrap">
                 {tags.map((tag: string) => (
-                  <div className=" rounded-md bg-slate-900">#{tag}</div>
+                  <div className=" rounded-sm px-[6px] py-[1px] bg-slate-900 shadow-md">#{tag}</div>
                 ))}
               </div>
               <div className="max-w-[800px] mt-">
