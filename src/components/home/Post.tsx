@@ -31,7 +31,7 @@ const post = ({ post, date, cover, link, title, tags }: post) => {
               </div>
             </div>
             <div className="text-white !max-w-full">
-              <div className="mb-2 uppercase">{title}</div>
+              <div className="mb-2 capitalize">{title}</div>
               <div className="flex flex-wrap ">
                 <div className="mb-2 !max-w-full flex flex-wrap" dangerouslySetInnerHTML={{ __html: post }} />
                 <p className="relative bottom-3 text-blue-500">Show More</p>
